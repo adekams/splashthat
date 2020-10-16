@@ -1,0 +1,359 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    color: rgb(27, 18, 46);
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+section:nth-child(even) {
+    background-color: #FAFAFC;
+}
+a {
+    text-decoration: none;
+    color: #A2A0A6;
+    cursor: pointer;
+}
+a:hover {
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+}
+p.platform {
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+header #heading{
+    background: #2c253d;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+header #heading h3{
+    margin: 0;
+    color: #FEFEFE;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+header #heading h3 span a{
+    color:rgb(245, 255, 70);
+}
+header #heading h3 span a:hover{
+    color: #fefefe;
+}
+.nav{
+    background-color: #fff;
+    box-shadow: 1px  1px 1px rgba(0, 0, 0, 0.1);
+    margin-top: 45px;
+    font-weight: 600;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom:12px; 
+}
+.nav ul{
+    list-style-type: none;
+    overflow: auto;
+    background-color: #fff;
+}
+.nav li a{
+    display: block;
+    padding: 15px;
+    color: rgb(27, 18, 46);
+    text-decoration: none;
+}
+.nav li a:hover, .nav .menu-btn:hover{
+    color: #4C4094;
+}
+.logo{
+    font-size: 2.3em;
+    margin-top: 250px;
+    margin-left: 2px;
+    text-decoration: none;
+}
+.logo:hover, .nav ul li a  {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.nav .menu {
+    clear: both;
+    max-height: 0;
+    transition:max-height .2s ease-in-out;    
+}
+.nav .menu-icon{
+    position: relative;
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    user-select: none;
+}
+.nav .menu-icon .nav-icon{
+    background-color: #2c253d;
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 20px;
+    transition: background .2s ease-out;
+}
+.nav .menu-icon .nav-icon:before,.nav .menu-icon .nav-icon:after{
+    position: absolute;
+    background-color: #2c253d;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+}
+.nav .menu-icon .nav-icon::before{
+    top: 5px;
+}
+.nav .menu-icon .nav-icon:after{
+    top: -5px;
+}
+.nav .menu-btn{
+    display: none;
+}
+.nav .menu-btn:checked ~ .menu{
+    max-height: 240px;
+}
+.nav .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+.nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+}
+.nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+}
+.nav .menu-btn:checked ~ .menu-icon:not(.steps).navicon:before,
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after  {
+    top: 0;
+}
+.nav li#line {
+    display: none;
+    /* margin: auto; */
+}
+
+p {
+    line-height: 1.5;
+}
+button{
+    cursor: pointer;
+    font-weight: 600;
+    padding: 15px;
+    margin: 10px;  
+}
+
+button.white-bg, button.colored-bg:hover{
+    background: #fff;
+    color:  #4C4094;
+    border: 1px solid #4C4094;
+}
+button.colored-bg, button.white-bg:hover{
+    background: #4C4094;
+    color: #fff;
+    border: 1px solid #4C4094;
+}
+button.learn-more{
+    border: none;
+    color: #4C4094;
+    display: block;
+    font-weight: 600;
+    margin-left: 0;
+    padding-left: 0;
+    background-color: transparent;
+}
+
+section{
+    text-align: center;
+    padding: 50px 5%;
+}
+section .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+section .section-header{
+    font-size: 25px;
+    font-weight: bold;
+}
+section img#device{
+    max-width: 100%;   
+}
+section .right, section .left{  
+    width: 80%;
+    align-self: center;
+}
+section .right img{
+    max-width: 100%;
+    flex-grow: 1;
+    float: right;
+    
+}
+
+section .flex{
+ padding: 10px 5%;
+ justify-content: space-evenly;
+}
+section .card{
+    flex-grow: 1;
+    width: calc(90%);
+    text-align: justify;
+    padding: 5% 0;
+    text-align: left;
+}
+section .medium{
+    font-size: 2.1em;
+    font-weight: 600;
+}
+section .card img.icons{
+    width: 50px;
+    margin-bottom: 20px;
+}
+section .card .card-title{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+section .section-content{
+    font-size: 1.7em;
+    font-weight: 500;
+    padding: 15px 0;
+}
+section .quartro-cards{
+    flex-grow: 1;
+    width: calc(50% - 10px);
+    text-align: justify;
+    margin-right: 10px;
+    padding: 5% 0;
+    text-align: left;
+}
+section .quartro-cards img {
+    width: 100%;
+}
+section .left #first-box {
+    color: #BCB6FD;
+}
+section .left #second-box {
+    color: #4C4094;
+    position: relative;
+}
+section .left #second-box #reg-box {
+    position: absolute;
+    top: 50%;
+    margin-top: -25%;
+}
+section #register{
+    margin: 40px 0;
+}
+section #register .flex{
+    background-color: #FAFAFC;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bold{
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+
+footer .logo {
+    padding: 0;
+    color: #2c253d;
+    margin-top: 0;
+}
+#footer-flex{
+    padding: 10px 40px;
+}
+#footer-bottom{
+    padding: 10px 20px;
+    justify-content: space-around;
+}
+footer .copyright, footer .last-part {
+    margin-bottom: 10px;
+}
+#social-media a{
+    margin-right: 5px;
+}
+#social-media a:hover{
+    color: #1b122e;
+}
+
+footer #footer-flex{
+    margin: 25px;
+}
+footer #last-line {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.footer-content > .content-title{
+    margin-bottom: 15px;
+}
+.footer-list li{
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 475px){
+    section .card{
+        width: calc(90% / 2);
+        margin-right: 10px;
+    }
+}
+@media (min-width: 768px) {
+    section .right, section .left {
+        flex-grow: 1;
+        max-width: 45%;
+        text-align: left;
+    }
+}
+@media (min-width:1079px /*48em*/) {
+    .nav li {
+        float: left;
+    }
+    .nav li a {
+        padding:15px 10px;
+    }
+    .nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .nav .menu-icon {
+        display: none;
+    }
+    .nav li#line {
+        display: inline;
+        border-left: 1px solid #2c253d;
+        height: 40px;
+        /* margin: auto; */
+    }
+    
+    button#demo {
+        margin: 0;
+    } 
+
+    section .card{
+        width: calc(33.33% - 5%);
+        margin-right: 5%;
+    }
+    section .quartro-cards{
+        width: calc(25% - 10px);
+    }
+}
